@@ -1,0 +1,243 @@
+@media screen and (max-width: 1080px) {
+  /* ################ Mobile Nav ########### */
+
+  .nav {
+    height: 50px;
+    background-color: #a50034;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999999999;
+    display: block;
+    transition: 5s ease-in;
+  }
+
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
+  /* ##########################  Header styles ###################### */
+  header {
+    display: none;
+    transition: 10s ease-in-out;
+  }
+
+  .detail-title {
+    font-size: 1.5em;
+  }
+
+  .layer1 {
+    display: none;
+  }
+
+  .slides {
+    padding: 0px;
+    height: 500px;
+  }
+
+  /* ##################### Exhibition section styles ############# */
+  .row {
+    display: block;
+    padding: 0 auto;
+  }
+
+  .column {
+    width: 48%;
+  }
+
+
+  section {
+    flex-direction: column;
+    padding: 5px;
+    overflow: hidden;
+  }
+
+  .booklet {
+    width: 100%;
+  }
+
+  .desc-box {
+    margin-top: 20px;
+    width: 100%;
+    margin-left: unset;
+  }
+
+  /* $$$$$$$$$$$$$$ Home appliance section */
+  .home-app{
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .sub1{
+    width: 100%;
+  }
+
+  .displays-items2{
+    display: none;
+  }
+
+  .sub2{
+    margin-left: auto;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .aside-img{
+    display: none;
+  }
+   .aside-desc{
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+
+  /* ################## footer #################### */
+  .footer-col {
+    float: right;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  li, .footer-h, .newsletter, button, .footer-p{
+      text-align: center;
+  }
+
+  .Newsletter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .row {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column {
+    margin: 10px auto;
+    width: 100%;
+  }
+
+  .booklet {
+    flex-direction: column;
+  }
+
+  .img-box,
+  .img-box2 {
+    width: 100%;
+  }
+
+  .home-app{
+    padding: 10px ;
+  }
+
+  .hr{
+    display: none;
+  }
+
+  .display-h4{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    }
+
+    .displays1{
+      display: flex;
+      flex-direction: column;
+      }
+      
+    .displays-items{
+      text-align: center;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .displays-items2{
+      display: none;
+    }
+
+    .aside{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .aside-img{
+      display: block;
+      width: 50%;
+    }
+     .aside-desc{
+      width: 50%;
+      height: auto;
+      text-align: center;
+    }
+
+    .aside-h{
+      font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+  .Newsletter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+}
+
