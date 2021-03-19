@@ -1,242 +1,1238 @@
-  <!--###################### Design by Isaac forson |  youngtech303@gmail.com ################### -->
+<!--###################### Design by Isaac forson |  youngtech303@gmail.com ################### -->
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LG Website</title>
 
   <!--############# All Css files ############## -->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/mobile.css">
-  <link href="css/slideWiz.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+  <link href="css/slideWiz.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css" />
 
+  <!-- ############# Bootstrap ################# -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js"></script>
 </head>
 
 <body>
+  <!-- Back to top button -->
+  <a id="to-top"></a>
 
   <!-- ############## Header Section ################# -->
+  <!-- currency -->
+  <div id="layer">
+    <div>
+      <span class="layer-text">LG SIGNATURE</span>
+    </div>
+    <select class="layer-text currency" name="" id="">
+      <option style="width: 800px;" value="CEDIS" selected>CEDIS</option>
+      <option style="width: 800px;" value="USD">USD</option>
+    </select>
+  </div>
 
-  <header>
-<!--     <div class="layer1">
-      <a class="links" href="#">this is a dummy text</a>
-      <a class="links" href="#">text </a>
-    </div> -->
-    <div class="layer2">
-      <div class="logo"><img src="img/logo-lg.svg" class="logo_img" alt="LG logo"></div>
-      <a class="links" href="#">this is a dummy text</a>
-      <a class="links" href="#">another sample text</a>
-      <a class="links" href="#">sample text</a>
-      <a class="links" href="#">sample text</a>
-      <a class="links" href="#">sample text</a>
-      <a class="links" href="#">text</a>
-      <input class="links" type="text" placeholder="search">
-      <div class="user_btn">
-        <button style="background: none;" class="btn"><i class="fas fa-shopping-cart"></i></button>
-        <button style="background: none;" class="btn"><i class="fas fa-user"></i> Log In</button>
-        <button class="btn">dummy Text</button>
-      </div>
+  <!-- nav bar links -->
+  <header id="navbar">
+    <div class="link-box">
+      <a href="index.html"> <img src="img/logo-lg.svg" class="logo_img" alt="LG logo" /></a>
+      <a href="TVs.html" class="link">TV & HOME ENTERTAINMENT</a>
+      <a href="home-appliances.html" class="link">HOME APPLIANCES</a>
+      <a href="air-conditioner.html" class="link">AIR CONDITIONERS</a>
+      <a href="computer-products.html" class="link">COMPUTER PRODUCTS</a>
+      <a href="index.html" class="link current">SHOP</a>
+    </div>
+
+    <div class="user-box">
+      <input type="text" class="user-input" placeholder="search" />
+      <a href="cart.html" class="user-cart">
+        <i style="color: black" class="fas fa-shopping-cart"></i> (0)</a>
+      <a href="#" class="user-login"> <i class="fas fa-user"></i> Login</a>
+      <a href="#" class="user-signup"><button id="add-btn" class="signup-btn">Sign Up</button></a>
     </div>
   </header>
 
   <!-- ############################# Mobile Nav ############################ -->
-  <div class="nav">
-    <input type="checkbox" id="nav-check">
-    <div class="nav-header">
-      <div class="nav-title">
-        <img src="img/logo-lg.svg" class="logo_img" alt="LG logo">
-      </div>
-    </div>
-    <div class="nav-btn">
-      <label for="nav-check">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-    </div>
 
-    <div class="nav-links">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-      <a href="#">Link 4</a>
-      <a href="#">Link 5</a>
-      <a href="#">Link 6</a>
-    </div>
+    <!-- logo  -->
+    <div class="topnav">
+      <img src="img/logo-lg.svg" class="logo_img" style="
+        width: 80px;
+        margin-left: 50px;
+        padding: 6px;
+        float: left;
+        align-self: center;
+      " alt="LG logo" />
+
+      <!-- user icons | search bar -->
+      <div style="float: right; display: flex">
+          <a id="icon-link" href="index.html"><i class="mobile-icon fa fa-home" aria-hidden="true"></i></a>
+          <a id="icon-link" href="#"><i class="mobile-icon fa fa-user" aria-hidden="true"></i></a>
+          <a id="icon-link" href="cart.html"><i class="mobile-icon fa fa-shopping-cart" aria-hidden="true"></i></a>
+      </div>
+      <br /><br />
+
+      <!-- menu links -->
+      <div id="myLinks">
+          <ul class="Accordion">
+              <form class="example" action="#">
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              <li class="Accordion-item">
+                  <label for="radios-menu1">Air Conditioners</label>
+                  <input id="radios-menu1" type="radio" name="menu" />
+                  <ul class="Accordion-subElements">
+                      <li class="Accordion-subElement">
+                          <a  href="air-conditioner.html">Split Air Conditioners (10)</a>
+                      </li>
+                      <li class="Accordion-subElement">
+                          <a href="air-conditioner.html">Light Commercial ACS (4)</a>
+                      </li>
+                      <li class="Accordion-subElement">
+                          <a href="air-conditioner.html">Window Air Conditioners (4)</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="Accordion-item">
+                  <label for="radios-menu2">Computer Products</label>
+                  <input id="radios-menu2" type="radio" name="menu" />
+                  <ul class="Accordion-subElements">
+                      <li class="Accordion-subElement">
+                          <a href="computer-products.html">21:9 UltraWide Monitors (16)</a>
+                      </li>
+                      <li class="Accordion-subElement">
+                          <a href="computer-products.html">TV Monitors (4)</a>
+                      </li>
+                      <li class="Accordion-subElement"><a href="computer-products.html">Monitors (6)</a></li>
+                  </ul>
+              </li>
+              <li class="Accordion-item">
+                  <label for="radios-menu3">Home Appliances</label>
+                  <input id="radios-menu3" type="radio" name="menu" />
+                  <ul class="Accordion-subElements">
+                      <li class="Accordion-subElement">
+                          <a href="home-appliances.html">Refrigerators (10)</a>
+                      </li>
+                      <li class="Accordion-subElement">
+                          <a href="home-appliances.html">Washing Machines (4)</a>
+                      </li>
+                      <li class="Accordion-subElement">
+                          <a href="home-appliances.html">Gas Cookers (2)</a>
+                      </li>
+                      <li class="Accordion-subElement">
+                          <a href="home-appliances.html">Vacuum Cleaner (12)</a>
+                      </li>
+                      <li class="Accordion-subElement">
+                          <a href="home-appliances.html">Dish Washers (2)</a>
+                      </li>
+                      <li class="Accordion-subElement">
+                          <a href="home-appliances.html">Microwaves (42)</a>
+                      </li>
+                  </ul>
+              </li>
+
+              <li class="Accordion-item">
+                  <label for="radios-menu4">TVs & Entertainment</label>
+                  <input id="radios-menu4" type="radio" name="menu" />
+                  <ul class="Accordion-subElements">
+                      <li class="Accordion-subElement"><a href="#">TVs (10)</a></li>
+                      <li class="Accordion-subElement">
+                          <a href="TVs.html">Sample TVs (2)</a>
+                      </li>
+                      <li class="Accordion-subElement">
+                          <a href="TVs.html">Sample TVs (6)</a>
+                      </li>
+                      <li class="Accordion-subElement">
+                          <a href="TVs.html">Sample TVs (20)</a>
+                      </li>
+                      <li class="Accordion-subElement">
+                          <a href="TVs.html">Sample TVs (6)</a>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+      </a>
   </div>
+
 
   <!-- ######### Slide show div ############# -->
-  <div class="slideWiz slides"></div>
 
+  <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="animation: push;  max-height: 420;">
 
-  <!-- ##########  EXhibition cards ########## -->
-  <div class="row">
-    <div class="column" style="background-image: url('https://c.files.bbci.co.uk/70B3/production/_114115882_splitairconditioner.jpg'); height: 450px;">
-      <h3>Title 1</h3>
-    </div>
-    <div class="column" style="background-image: url('https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2020/07/ap-1596124597.jpeg'); height: 450px;">
-      <h3>Title 2</h3>
-    </div>
-    <div class="column" style="background-image: url('https://www.midea-group.com/dam/jcr:6182ac10-04aa-48b5-a47d-69bbacc060ed/midea_hero_360x282_Small_appliances.jpg'); height: 450px;">
-      <h3>Title 3</h3>
+    <ul style="background-color: black;" class="uk-slideshow-items">
+      <li>
+        <img class="banner-img" src="https://www.lg.com/my/images/microsite/healthy-home-solution/H%26A-Healthy-Home-Solutions-Banner-Lineup-2020-Desktop.jpg" alt=""
+          >
+
+        <div id="banner-text-div" class="uk-position-center uk-position-large uk-text-center uk-light">
+          <h2 class="uk-margin-remove banner-h">Sample Title</h2><br>
+          <p class="uk-margin-remove banner-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. ipsum dolor sit
+            amet, consectetur adipiscing elit.</p><br>
+          <button class="uk-margin-remove banner-btn">Learn More</button>
+        </div>
+      </li>
+      <li>
+        <img class="banner-img" src="https://mlvtgiqzoszz.i.optimole.com/Sb3K8mU-5-pyMp0W/w:1600/h:800/q:90/https://www.appliancecity.co.uk/wp-content/uploads/2018/03/instaview-feat1.jpg" alt=""
+          >
+        <div id="banner-text-div" class="uk-position-center uk-position-large uk-text-center uk-light">
+          <h2 class="uk-margin-remove banner-h">Sample Title</h2><br>
+
+          <p class="uk-margin-remove banner-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. ipsum dolor sit
+            amet, consectetur adipiscing elit.</p><br>
+          <button class="uk-margin-remove banner-btn">Learn More</button>
+        </div>
+      </li>
+      <li>
+        <img class="banner-img" src="https://www.lg.com/uk/images/lg-signature/images/C0084_Brand_Article/lg-signature-brand-art-culture-ces-2021-thumb-large.jpg" alt=""
+          >
+        <div id="banner-text-div" class="uk-position-center uk-position-large uk-text-center uk-light">
+          <h2 class="uk-margin-remove banner-h">Sample Title</h2><br>
+
+          <p class="uk-margin-remove banner-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. ipsum dolor sit
+            amet, consectetur adipiscing elit.</p><br>
+          <button class="uk-margin-remove banner-btn">Learn More</button>
+        </div>
+      </li>
+    </ul>
+
+    <div class="uk-light">
+      <a id="arrow" class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+        uk-slideshow-item="previous"></a>
+      <a id="arrow" class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+        uk-slideshow-item="next"></a>
     </div>
 
-    <div class="column" style="background-image: url('https://cdn.mos.cms.futurecdn.net/uzpB94wvS67ufTdGszCphG.jpg'); height: 450px;">
-      <h3>Title 4</h3>
-    </div>
   </div>
 
+
+
+
+  <!-- #################  EXhibition cards ###################### -->
+  <div id="row">
+    <div id="column" style="
+          background-image: url('https://c.files.bbci.co.uk/70B3/production/_114115882_splitairconditioner.jpg');
+          height: 450px;
+        ">
+      <h4 class="feature-h">Air Conditioners </h4>
+    </div>
+    <div id="column" style="
+          background-image: url('https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2020/07/ap-1596124597.jpeg');
+          height: 450px;
+        ">
+      <h4 class="feature-h">TVs & Entertainment </h4>
+    </div>
+    <div id="column" style="
+          background-image: url('https://www.midea-group.com/dam/jcr:6182ac10-04aa-48b5-a47d-69bbacc060ed/midea_hero_360x282_Small_appliances.jpg');
+          height: 450px;
+        ">
+      <h4 class="feature-h">Home Appliances</h4>
+    </div>
+
+    <div id="column" style="
+          background-image: url('https://www.lg.com/us/images/MN/features/MNT-27GN950-Hero-Banner-thin-M.jpg');
+          height: 450px;
+        ">
+      <h4 class="feature-h">Computer Products</h4>
+    </div>
+  </div>
+  <br /><br />
 
   <!--########################## APPLIANCES SECTIONS ############################# -->
 
-  <!-- ############# Titles for appliances ############## -->
-  <div class="home-app">
-    <div class="sub1">
-      <div class="hr">
-        <div class="displays-title">
-          <p>Home Appliances</p>
+  <div class="accordion">
+    <input class="accordion__radio" type="radio" name="accordion-tabs" id="tab-one" checked />
+    <label class="accordion__label" for="tab-one">MOST POPULAR
+      <span class="accordion-tab--status"></span>
+    </label>
+    <div class="accordion__content">
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img" src="https://www.lg.com/us/images/refrigerators/md05906416/gallery/small03.jpg"
+            alt="" />
         </div>
-        <div class="displays-title">
-          <p>Washing Machines</p>
-        </div>
-        <div class="displays-title">
-          <p>Air conditioners</p>
-        </div>
-        <div class="displays-title">
-          <p>Home Television Set</p>
-        </div>
+        <p class="product-desc">LG INSTAVIEW</p>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
       </div>
 
-      <!-- ################## images for appliances first row ############### -->
-      <div class="displays1">
-        <div class="displays-items">
-          <h4 class="display-h4">Home Appliances</h4>
-          <img style="width: 100%;" src="https://images-na.ssl-images-amazon.com/images/I/813oLrVJHFL._AC_SX522_.jpg">
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://images.samsung.com/is/image/samsung/levant-wd6500n-wd10n645r2x-fh-fronttitaniumgray-184045541?$720_576_PNG$"
+            alt="" />
         </div>
-        <div class="displays-items">
-          <h4 class="display-h4">Washing Machines</h4>
-          <img style="width: 100%;" src="https://brain-images-ssl.cdn.dixons.com/6/3/10211936/u_10211936.jpg">
-        </div>
-        <div class="displays-items">
-          <h4 class="display-h4">Air conditioners</h4>
-          <img style="width: 100%;"
-            src="https://hnsgsfp.imgix.net/9/images/detailed/30/LG__S3-Q09JA2PA_1.0HP_Dual_Inverter_Premium_Air_Conditioner.jpg?fit=fill&bg=0FFF&w=1536&h=900&auto=format,compress">
-        </div>
-        <div class="displays-items">
-          <h4 class="display-h4">Home Television Set</h4>
-          <img style="width: 100%;"
-            src="https://images.samsung.com/is/image/samsung/ca-uhdtv-nu7090-un43nu6900fxzc-frontblack-115122556?$720_576_PNG$">
-        </div>
-      </div><br>
+        <span class="product-desc">FRONT LOAD (WASH & DRY)</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
 
-      <!-- ################## images for appliances second row ###############   -->
-      <div class="displays-items2">
-        <div class="aside"
-          style="background-image: url('https://x2y9s3y6.stackpathcdn.com/wp-content/uploads/2019/08/refridge.jpg')">
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.lg.com/africa/images/split-air-conditioners/md06099436/gallery/medium01.jpg" alt="" />
         </div>
-        <div class="aside"
-          style="background-image: url('https://www.homeappliancesworld.com/files/2015/09/home-appliance1.jpg')">
+        <span class="product-desc">DUALCOOL INVERTOR AC</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://cf2.s3.souqcdn.com/item/2020/06/08/13/08/94/65/0/item_L_130894650_c7b33d53831c8.jpg" alt="" />
         </div>
+        <span class="product-desc">OLED TV 65 INCH GX SERIES</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img" src="https://www.lg.com/africa/images/home-theatre-systems/md07514464/350-0.jpg"
+            alt="" />
+        </div>
+        <span class="product-desc">1000W4.2CH HOME THEATER</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://goldenleafstore.com/wp-content/uploads/2019/09/LG-25L-NeoChef-Smart-Inverter-Microwave-Oven-MS2535GISfront.jpeg"
+            alt="" />
+        </div>
+        <span class="product-desc">SMART INVERTER MICROWAVE</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img" src="https://www.lg.com/sa_en/images/tvs/md06200217/gallery/D1_F.jpg" alt="" />
+        </div>
+        <span class="product-desc">NANOCELL TV</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.lg.com/za/images/washing-machines/md05908917/gallery/G_Good_FH6G1BCHK6N_ASSPEIL_FrontOpen3_M04.jpg"
+            alt="" />
+        </div>
+        <span class="product-desc">TWIN WASH</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.lg.com/africa/images/microwaves/md05814990/gallery/MS2595CIS_Desktop-MWO1-new.jpg"
+            alt="" />
+        </div>
+        <span class="product-desc">SILVER, SMART INVERTOR</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwb24df975/JBL_Charge4_Front_Midnight_Black_1605x1605px.png?sw=537&sfrm=png"
+            alt="" />
+        </div>
+        <span class="product-desc">PORTABLE SPEAKER</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
       </div>
     </div>
 
-    <!-- ###################### Side div for appliance section #################### -->
-    <div class="sub2">
-      <img class="aside-img" src="https://www.respectfood.com/wp-content/uploads/sites/2/2018/01/1.png" alt=""
-        srcset="">
-      <div class="aside-desc">
-        <h2 class="aside-h">Knock Twice, See Inside</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna</p>
-        <button style="background-color:#a50034; color: white;"> Dummy Text</button>
+    <input class="accordion__radio" type="radio" name="accordion-tabs" id="tab-two" />
+    <label class="accordion__label" for="tab-two">EXCITING OFFERS FOR YOU
+      <span class="accordion-tab--status"></span>
+    </label>
+    <div class="accordion__content">
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img" src="https://www.lg.com/us/images/refrigerators/md05906416/gallery/small03.jpg"
+            alt="" />
+        </div>
+        <p class="product-desc">LG INSTAVIEW</p>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://images.samsung.com/is/image/samsung/levant-wd6500n-wd10n645r2x-fh-fronttitaniumgray-184045541?$720_576_PNG$"
+            alt="" />
+        </div>
+        <span class="product-desc">FRONT LOAD (WASH & DRY)</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.lg.com/africa/images/split-air-conditioners/md06099436/gallery/medium01.jpg" alt="" />
+        </div>
+        <span class="product-desc">DUALCOOL INVERTOR AC</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://cf2.s3.souqcdn.com/item/2020/06/08/13/08/94/65/0/item_L_130894650_c7b33d53831c8.jpg" alt="" />
+        </div>
+        <span class="product-desc">OLED TV 65 INCH GX SERIES</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img" src="https://www.lg.com/africa/images/home-theatre-systems/md07514464/350-0.jpg"
+            alt="" />
+        </div>
+        <span class="product-desc">1000W4.2CH HOME THEATER</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://goldenleafstore.com/wp-content/uploads/2019/09/LG-25L-NeoChef-Smart-Inverter-Microwave-Oven-MS2535GISfront.jpeg"
+            alt="" />
+        </div>
+        <span class="product-desc">SMART INVERTER MICROWAVE</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img" src="https://www.lg.com/sa_en/images/tvs/md06200217/gallery/D1_F.jpg" alt="" />
+        </div>
+        <span class="product-desc">NANOCELL TV</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.lg.com/za/images/washing-machines/md05908917/gallery/G_Good_FH6G1BCHK6N_ASSPEIL_FrontOpen3_M04.jpg"
+            alt="" />
+        </div>
+        <span class="product-desc">TWIN WASH</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.lg.com/africa/images/microwaves/md05814990/gallery/MS2595CIS_Desktop-MWO1-new.jpg"
+            alt="" />
+        </div>
+        <span class="product-desc">SILVER, SMART INVERTOR</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwb24df975/JBL_Charge4_Front_Midnight_Black_1605x1605px.png?sw=537&sfrm=png"
+            alt="" />
+        </div>
+        <span class="product-desc">PORTABLE SPEAKER</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
       </div>
     </div>
+
+    <input class="accordion__radio" type="radio" name="accordion-tabs" id="tab-three" />
+    <label class="accordion__label" for="tab-three">NEWEST
+      <span class="accordion-tab--status"></span>
+    </label>
+    <div class="accordion__content">
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img" src="https://www.lg.com/us/images/refrigerators/md05906416/gallery/small03.jpg"
+            alt="" />
+        </div>
+        <p class="product-desc">LG INSTAVIEW</p>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://images.samsung.com/is/image/samsung/levant-wd6500n-wd10n645r2x-fh-fronttitaniumgray-184045541?$720_576_PNG$"
+            alt="" />
+        </div>
+        <span class="product-desc">FRONT LOAD (WASH & DRY)</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.lg.com/africa/images/split-air-conditioners/md06099436/gallery/medium01.jpg" alt="" />
+        </div>
+        <span class="product-desc">DUALCOOL INVERTOR AC</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://cf2.s3.souqcdn.com/item/2020/06/08/13/08/94/65/0/item_L_130894650_c7b33d53831c8.jpg" alt="" />
+        </div>
+        <span class="product-desc">OLED TV 65 INCH GX SERIES</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img" src="https://www.lg.com/africa/images/home-theatre-systems/md07514464/350-0.jpg"
+            alt="" />
+        </div>
+        <span class="product-desc">1000W4.2CH HOME THEATER</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://goldenleafstore.com/wp-content/uploads/2019/09/LG-25L-NeoChef-Smart-Inverter-Microwave-Oven-MS2535GISfront.jpeg"
+            alt="" />
+        </div>
+        <span class="product-desc">SMART INVERTER MICROWAVE</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img" src="https://www.lg.com/sa_en/images/tvs/md06200217/gallery/D1_F.jpg" alt="" />
+        </div>
+        <span class="product-desc">NANOCELL TV</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.lg.com/za/images/washing-machines/md05908917/gallery/G_Good_FH6G1BCHK6N_ASSPEIL_FrontOpen3_M04.jpg"
+            alt="" />
+        </div>
+        <span class="product-desc">TWIN WASH</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.lg.com/africa/images/microwaves/md05814990/gallery/MS2595CIS_Desktop-MWO1-new.jpg"
+            alt="" />
+        </div>
+        <span class="product-desc">SILVER, SMART INVERTOR</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwb24df975/JBL_Charge4_Front_Midnight_Black_1605x1605px.png?sw=537&sfrm=png"
+            alt="" />
+        </div>
+        <span class="product-desc">PORTABLE SPEAKER</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+    </div>
+
+    <input class="accordion__radio" type="radio" name="accordion-tabs" id="tab-four" />
+    <label class="accordion__label" for="tab-four">HIGHLY RATED <br />
+      <span class="accordion-tab--status"></span>
+    </label>
+    <div class="accordion__content">
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img" src="https://www.lg.com/us/images/refrigerators/md05906416/gallery/small03.jpg"
+            alt="" />
+        </div>
+        <p class="product-desc">LG INSTAVIEW</p>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://images.samsung.com/is/image/samsung/levant-wd6500n-wd10n645r2x-fh-fronttitaniumgray-184045541?$720_576_PNG$"
+            alt="" />
+        </div>
+        <span class="product-desc">FRONT LOAD (WASH & DRY)</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.lg.com/africa/images/split-air-conditioners/md06099436/gallery/medium01.jpg" alt="" />
+        </div>
+        <span class="product-desc">DUALCOOL INVERTOR AC</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://cf2.s3.souqcdn.com/item/2020/06/08/13/08/94/65/0/item_L_130894650_c7b33d53831c8.jpg" alt="" />
+        </div>
+        <span class="product-desc">OLED TV 65 INCH GX SERIES</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img" src="https://www.lg.com/africa/images/home-theatre-systems/md07514464/350-0.jpg"
+            alt="" />
+        </div>
+        <span class="product-desc">1000W4.2CH HOME THEATER</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://goldenleafstore.com/wp-content/uploads/2019/09/LG-25L-NeoChef-Smart-Inverter-Microwave-Oven-MS2535GISfront.jpeg"
+            alt="" />
+        </div>
+        <span class="product-desc">SMART INVERTER MICROWAVE</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img" src="https://www.lg.com/sa_en/images/tvs/md06200217/gallery/D1_F.jpg" alt="" />
+        </div>
+        <span class="product-desc">NANOCELL TV</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.lg.com/za/images/washing-machines/md05908917/gallery/G_Good_FH6G1BCHK6N_ASSPEIL_FrontOpen3_M04.jpg"
+            alt="" />
+        </div>
+        <span class="product-desc">TWIN WASH</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.lg.com/africa/images/microwaves/md05814990/gallery/MS2595CIS_Desktop-MWO1-new.jpg"
+            alt="" />
+        </div>
+        <span class="product-desc">SILVER, SMART INVERTOR</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwb24df975/JBL_Charge4_Front_Midnight_Black_1605x1605px.png?sw=537&sfrm=png"
+            alt="" />
+        </div>
+        <span class="product-desc">PORTABLE SPEAKER</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+    </div>
+
+    <input class="accordion__radio" type="radio" name="accordion-tabs" id="tab-five" />
+    <label class="accordion__label" for="tab-five">BEST SELLERS
+      <span class="accordion-tab--status"></span>
+    </label>
+    <div class="accordion__content">
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img" src="https://www.lg.com/us/images/refrigerators/md05906416/gallery/small03.jpg"
+            alt="" />
+        </div>
+        <p class="product-desc">LG INSTAVIEW</p>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://images.samsung.com/is/image/samsung/levant-wd6500n-wd10n645r2x-fh-fronttitaniumgray-184045541?$720_576_PNG$"
+            alt="" />
+        </div>
+        <span class="product-desc">FRONT LOAD (WASH & DRY)</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.lg.com/africa/images/split-air-conditioners/md06099436/gallery/medium01.jpg" alt="" />
+        </div>
+        <span class="product-desc">DUALCOOL INVERTOR AC</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://cf2.s3.souqcdn.com/item/2020/06/08/13/08/94/65/0/item_L_130894650_c7b33d53831c8.jpg" alt="" />
+        </div>
+        <span class="product-desc">OLED TV 65 INCH GX SERIES</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img" src="https://www.lg.com/africa/images/home-theatre-systems/md07514464/350-0.jpg"
+            alt="" />
+        </div>
+        <span class="product-desc">1000W4.2CH HOME THEATER</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://goldenleafstore.com/wp-content/uploads/2019/09/LG-25L-NeoChef-Smart-Inverter-Microwave-Oven-MS2535GISfront.jpeg"
+            alt="" />
+        </div>
+        <span class="product-desc">SMART INVERTER MICROWAVE</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img" src="https://www.lg.com/sa_en/images/tvs/md06200217/gallery/D1_F.jpg" alt="" />
+        </div>
+        <span class="product-desc">NANOCELL TV</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.lg.com/za/images/washing-machines/md05908917/gallery/G_Good_FH6G1BCHK6N_ASSPEIL_FrontOpen3_M04.jpg"
+            alt="" />
+        </div>
+        <span class="product-desc">TWIN WASH</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.lg.com/africa/images/microwaves/md05814990/gallery/MS2595CIS_Desktop-MWO1-new.jpg"
+            alt="" />
+        </div>
+        <span class="product-desc">SILVER, SMART INVERTOR</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="img-wrapper">
+          <img class="product-img"
+            src="https://www.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwb24df975/JBL_Charge4_Front_Midnight_Black_1605x1605px.png?sw=537&sfrm=png"
+            alt="" />
+        </div>
+        <span class="product-desc">PORTABLE SPEAKER</span>
+        <span style="
+              font-size: 0.75em;
+              font-weight: bolder;
+              line-height: 16px;
+              color: black;
+            ">GHC 3,499.00</span><br />
+        <button id="add-btn" class="product-desc">ADD TO CART</button>
+      </div>
+    </div>
+  </div>
+  <br /><br />
+
+  <!-- ###################### Blog Section ############################## -->
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4  g-4" style="margin: 10px;">
+    <div class="col">
+      <div class="card h-100">
+        <a href="blog-details.html"> <img src="img/computer/computer2.webp" class="blog-img card-img-top" alt="..." /></a>
+        <div class="card-body">
+          <a class="blog-link" href="blog-details.html">
+            <h5 class="card-title">Sample title</h5>
+          </a>
+          <p class="card-text">
+            This is a longer card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+          </p>
+          <a class="blog-link" href="blog-details.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <a href="blog-details.html"> <img src="img/computer/computer3.jpg" class="blog-img card-img-top" alt="..." /></a>
+        <div class="card-body">
+          <a class="blog-link" href="blog-details.html">
+            <h5 class="card-title">Sample title</h5>
+          </a>
+          <p class="card-text">
+            This is a longer card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+          </p>
+          <a class="blog-link" href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <a href="blog-details.html"> <img src="img/tv/tv1.webp" class="blog-img card-img-top" alt="..." /></a>
+        <div class="card-body">
+          <a class="blog-link" href="blog-details.html">
+            <h5 class="card-title">Sample title</h5>
+          </a>
+          <p class="card-text">
+            This is a longer card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+          </p>
+          <a class="blog-link" href="blog-details.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <a href="blog-details.html"> <img src="img/computer/computer3.jpg" class="blog-img card-img-top" alt="..." /></a>
+        <div class="card-body">
+          <a class="blog-link" href="blog-details.html">
+            <h5 class="card-title">Sample title</h5>
+          </a>
+          <p class="card-text">
+            This is a longer card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+          </p>
+          <a class="blog-link" href="blog-details.html">Read More</a>
+        </div>
+      </div>
+    </div>
+    <a href="blog.html" class="blog-link" style="text-decoration: underline;">Load More</a>
   </div><br><br>
 
-
-
-  <!-- ###################### Booklet section ######################### -->
-  <section>
-    <div class="booklet">
-      <div class="img-box"><img src="img/cover_1.jpg" style="width: 100%; height: 100%;" alt="aside image"></div>
-      <div class="img-box2">
-        <h4>Smoother gameplay for the winner</h4>
-        <h5>______this is another dummy text</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip empor
-          incididunt ut labore et dolore magna aliqua.</p>
-        <h5>Dummy Text</h5>
-      </div>
-    </div>
-
-    <!-- ##################### side description for booklet section ################# -->
-    <div class="desc-box">
-      <div style="display: flex; align-items: center;">
-        <div>
-          <img src="img/main.png" class="desc-img" alt="Description image">
-        </div>
-        <p class="desc-p"><b style="color: black; font-weight:bold;">Idunt ut labore et dolore</b> <br> magna aliqua. consectetur sum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        </p>
-      </div>
-      <div style="display: flex; align-items: center;">
-        <div>
-          <img src="img/main.png" class="desc-img" alt="Description image">
-        </div>
-        <p class="desc-p"><b style="color: black; font-weight:bold;">Idunt ut labore et dolore</b> <br> magna aliqua. consectetur sum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        </p>
-      </div>
-    </div>
-  </section>
-
-
-
   <!-- ############### FOOTER ########### -->
-  <footer>
-    <div class="footer-row">
-      <div class="footer-col">
-        <h4 class="footer-h">About Us</h4>
-        <p class="footer-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, xercitation ullamco laboris nisi ut
-          aliquip empor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      <div class="footer-col">
-        <h4 class="footer-h">Quick Links</h4>
-        <li> <a class="a" href="#">Mission </a></li>
-        <li> <a class="a" href="#">About Us</a></li>
-        <li> <a class="a" href="#">Services</a></li>
-        <li> <a class="a" href="#">Get in touch</a></li>
-        <li> <a class="a" href="#">Social</a></li>
-      </div>
-      <div class="footer-col">
-        <h4 class="footer-h">Quick Links</h4>
-        <li> <a class="a" href="#">Mission </a></li>
-        <li> <a class="a" href="#">About Us</a></li>
-        <li> <a class="a" href="#">Services</a></li>
-        <li> <a class="a" href="#">Get in touch</a></li>
-        <li> <a class="a" href="#">Social</a></li>
-      </div>
-      <div class="footer-col newsletter">
-        <h4 class="footer-h"> Newsletter</h4>
-        <p class="footer-p">Sign up for a newsletter</p>
-        <div class="Newsletter">
-          <input type="text">
-          <button>Submit</button>
+  <footer class="bg-dark">
+    <div class="container py-5">
+      <div class="row py-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4" style="color: white">
+            About Us
+          </h6>
+          <p class="text-muted">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <ul class="list-inline mt-4">
+            <li class="list-inline-item">
+              <a href="#" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" target="_blank" title="pinterest"><i class="fa fa-pinterest"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" target="_blank" title="vimeo"><i class="fa fa-vimeo"></i></a>
+            </li>
+          </ul>
         </div>
-         
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4" style="color: white">
+            Shop
+          </h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <a class="footer-link" href="#" class="text-muted">For Women</a>
+            </li>
+            <li class="mb-2">
+              <a class="footer-link" href="#" class="text-muted">For Men</a>
+            </li>
+            <li class="mb-2">
+              <a class="footer-link" href="#" class="text-muted">Stores</a>
+            </li>
+            <li class="mb-2">
+              <a class="footer-link" href="#" class="text-muted">Our Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4" style="color: white">
+            Company
+          </h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <a class="footer-link" href="#" class="text-muted">Login</a>
+            </li>
+            <li class="mb-2">
+              <a class="footer-link" href="#" class="text-muted">Register</a>
+            </li>
+            <li class="mb-2">
+              <a class="footer-link" href="#" class="text-muted">Wishlist</a>
+            </li>
+            <li class="mb-2">
+              <a class="footer-link" href="#" class="text-muted">Our Products</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4" style="color: white">
+            Newsletter
+          </h6>
+          <p class="text-muted mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
+            itaque temporibus.
+          </p>
+          <div class="p-1 rounded border">
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1"
+                class="form-control border-0 shadow-0" />
+              <div class="input-group-append">
+                <button id="button-addon1" type="submit" class="btn btn-link">
+                  <i class="fa fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyrights -->
+    <div class="bg-light py-4">
+      <div class="container text-center">
+        <p class="text-muted mb-0 py-2">
+          © 2021 LG Ghana All rights reserved.
+        </p>
       </div>
     </div>
   </footer>
 
   <!-- ############## JS Files ################# -->
   <script src="js/jquery.min.js"></script>
-  <script src="js/slideWiz.js"></script>
-  <script src="js/slideShow.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/mobile.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
 
-  <!--###################### Design by Isaac forson ################### -->
+<!--###################### Design by Isaac forson ################### -->
